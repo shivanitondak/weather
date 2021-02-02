@@ -12,6 +12,7 @@ const express = require('express')
 const hbs = require('hbs')
 const app = express()
 
+const port = process.env.PORT ||3000
 //console.log(__dirname)
 //path.join function is to manipulate paths
 //.. is to come out of 1 directory
@@ -142,7 +143,7 @@ app.get('*',(req,res)=>{
 })
 
 //to start the server
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000.')
+app.listen(port,()=>{
+    console.log('Server is up on port '+port+'.')
 }) //3000 is default development port
 //ctrl+c to terminate server
