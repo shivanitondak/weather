@@ -11,7 +11,7 @@ forecast=(latitude,longitude,callback)=>{
             callback('Unable to find location',undefined)
         }else{
             //callback(undefined,response.body.current.weather_descriptions[0]+'. It is currently '+response.body.current.temperature+' degrees out. It feels like '+response.body.current.feelslike+' degrees out.')
-            callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+' degrees out.')
+            callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+' degrees out. Also, UV Index at your area is '+body.current.uv_index+'.')
         }
     })
 
